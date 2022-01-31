@@ -1,0 +1,268 @@
+html {
+  height: 100vh;
+}
+body {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  border-top: solid;
+  border-left: solid;
+  border-right: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 380px;
+  width: 600px;
+  margin-left: 15px;
+  margin-top: 30px;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.input {
+  width: 86%;
+  outline: none;
+}
+
+form {
+  padding: 5px;
+}
+
+.temperature {
+  font-style: normal;
+  font-weight: normal;
+  font-size: 70px;
+  margin-top: 10px;
+  margin-bottom: 0px;
+  margin-left: 15px;
+  padding: 0px;
+}
+.tempflex {
+  display: flex;
+  flex-direction: row;
+  font-size: 32px;
+  padding: 1px;
+}
+.twowindows {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  align-items: stretch;
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+
+.window1 {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 300px;
+  border-top: solid;
+  border-right: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: black;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.window2 {
+  display: flex;
+  flex-direction: column;
+  height: 350px;
+  width: 300px;
+  border-top: solid;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: black;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+}
+
+.weathericon {
+  display: block;
+  text-align: center;
+  margin: 60px;
+  margin-top: 20px;
+  padding: 0px;
+}
+
+.imgweathericon {
+  height: 109px;
+  width: 128px;
+}
+
+.city {
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-bottom: 5px;
+  display: flex;
+  font-size: 26px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu {
+  height: 28px;
+  border-top: solid;
+  border-width: 1px;
+  border-color: black;
+  display: flex;
+  align-content: space-between;
+  justify-content: space-evenly;
+}
+
+.menuitems {
+  text-align: center;
+  width: 100%;
+  height: 100%;
+  line-height: 28px;
+  outline: none;
+  text-decoration: none;
+  color: black;
+  cursor: pointer;
+}
+
+#now {
+  border-right: solid;
+  border-width: 1px;
+  border-color: black;
+}
+#details {
+  border-right: solid;
+  border-width: 1px;
+  border-color: black;
+}
+
+.input {
+  border: none;
+  width: 96%;
+}
+
+.addedlocations {
+  font-size: 28px;
+  border-bottom: solid;
+  border-width: 1px;
+  border-color: black;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
+}
+
+.cities {
+  display: flex;
+  flex-direction: column;
+}
+
+.addedcity {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 22px;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 10px;
+}
+
+.crossToDelete {
+  line-height: 25px;
+}
+
+.tabs {
+  display: none;
+}
+
+.tabs:target {
+  display: block;
+}
+
+#tab2 {
+  flex-direction: column;
+  font-size: 32px;
+  padding: 5px;
+}
+
+.citydetail {
+  font-size: 60px;
+  padding-bottom: 26px;
+}
+
+.sunset {
+  padding-bottom: 21px;
+}
+
+#tab3 {
+}
+
+.forecastcity {
+  font-size: 22px;
+  padding: 5px;
+  padding-bottom: 0px;
+}
+
+.forecastscrollbox {
+  padding: 0px;
+  height: 290px;
+  overflow: scroll;
+}
+
+.forecastbox {
+  margin-top: 10px;
+  margin-right: 15px;
+  margin-left: 15px;
+  padding: 5px;
+  border: 1px solid;
+  display: grid;
+  height: 100px;
+  grid-template-columns: 33% 33% 33%;
+  grid-template-rows: 33% 33% 33%;
+}
+
+.date {
+  grid-column-start: 1;
+  grid-column-end: one;
+  grid-row-start: row1-start;
+  grid-row-end: 1;
+  align-self: start;
+}
+
+.forecasttemp {
+  grid-column-start: 1;
+  grid-column-end: two;
+  grid-row-start: row2-start;
+  grid-row-end: 2;
+}
+
+.forecastfeelslike {
+  grid-column-start: 1;
+  grid-column-end: two;
+  grid-row-start: row3-start;
+  grid-row-end: 3;
+}
+
+.forecasttime {
+  grid-column-start: 3;
+  grid-column-end: three;
+  grid-row-start: row1-start;
+  grid-row-end: 1;
+  align-self: start;
+  justify-self: end;
+}
+
+.forecastweather {
+  grid-column-start: 3;
+  grid-column-end: three;
+  grid-row-start: row2-start;
+  grid-row-end: 2;
+  justify-self: end;
+}
+
+.forecasticon {
+  grid-column-start: 3;
+  grid-column-end: three;
+  grid-row-start: row3-start;
+  grid-row-end: 3;
+  justify-self: end;
+  align-self: start;
+}

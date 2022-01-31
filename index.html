@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="wrapper">
+      <form onsubmit="return false">
+        <input type="text" class="input" />
+        <input
+          type="image"
+          src="/Magnifying_glass_icon.svg"
+          width="11"
+          height="11"
+          class="search"
+        />
+      </form>
+      <div class="twowindows">
+        <div class="window1">
+          <div class="content">
+            <div id="tab1" class="tabs">
+              <div class="temperature">City</div>
+              <div class="weathericon">
+                <img
+                  src="/icons8-cloud-96 1.svg"
+                  alt="weathericon"
+                  class="imgweathericon"
+                />
+              </div>
+              <div class="city">
+                <div class="cityName">Add in favorite!</div>
+                <img src="/Shape.svg" width="20" height="20" class="addCity" />
+              </div>
+            </div>
+            <div id="tab2" class="tabs">
+              <div class="citydetail">City name</div>
+              <div class="tempflex">
+                <div class="text">Temperature:&nbsp</div>
+                <div class="detailtemperature">9</div>
+                <div class="c">°</div>
+              </div>
+              <div class="tempflex">
+                <div class="text">Feels like:&nbsp</div>
+                <div class="feelslike">10</div>
+                <div class="c">°</div>
+              </div>
+              <div class="tempflex">
+                <div class="text">Weather:&nbsp</div>
+                <div class="detailsweather">Snow</div>
+              </div>
+              <div class="tempflex">
+                <div class="text">Sunrise:&nbsp</div>
+                <div class="sunrise">09:00</div>
+              </div>
+              <div class="tempflex">
+                <div class="text">Sunset:&nbsp</div>
+                <div class="sunset">18:00</div>
+              </div>
+            </div>
+            <div id="tab3" class="tabs">
+              <div class="forecastcity">Aktobe</div>
+              <div class="forecastscrollbox"></div>
+            </div>
+          </div>
+          <div class="menu">
+            <a href="#tab1" id="now" class="menuitems">Now</a>
+            <a href="#tab2" id="details" class="menuitems">Details</a>
+            <a href="#tab3" id="forecast" class="menuitems">Forecast</a>
+          </div>
+        </div>
+        <div class="window2">
+          <div class="addedlocations">Added Locations</div>
+          <div class="cities"></div>
+        </div>
+      </div>
+    </div>
+    <script type="module" src="weather.js"></script>
+    <script type="module" src="weatherRender.js"></script>
+    <script type="module" src="storage.js"></script>
+  </body>
+</html>
