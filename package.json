@@ -1,0 +1,25 @@
+{
+  "name": "weatherapp",
+  "version": "1.0.0",
+  "description": "WeatherApp",
+  "main": "weather.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Elisy69/WeatherApp.git"
+  },
+  "keywords": [
+    "weather"
+  ],
+  "author": "Elisei",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Elisy69/WeatherApp/issues"
+  },
+  "homepage": "https://github.com/Elisy69/WeatherApp#readme",
+  "devDependencies": {
+    "parcel": "^2.2.1"
+  }
+}
