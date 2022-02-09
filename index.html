@@ -22,7 +22,7 @@
       <div class="twowindows">
         <div class="window1">
           <div class="content">
-            <div id="tab1" class="tabs">
+            <div id="Now" data-tab-content class="active">
               <div class="temperature">City</div>
               <div class="weathericon">
                 <img
@@ -41,7 +41,7 @@
                 />
               </div>
             </div>
-            <div id="tab2" class="tabs">
+            <div id="Details" data-tab-content>
               <div class="citydetail">City name</div>
               <div class="tempflex">
                 <div class="text">Temperature:&nbsp</div>
@@ -66,15 +66,32 @@
                 <div class="sunset">18:00</div>
               </div>
             </div>
-            <div id="tab3" class="tabs">
+            <div id="Forecast" data-tab-content>
               <div class="forecastcity">Aktobe</div>
               <div class="forecastscrollbox"></div>
             </div>
           </div>
           <div class="menu">
-            <a href="#tab1" id="now" class="menuitems">Now</a>
+            <button id="btnNow" data-tab-target="#Now" class="menuitems">
+              Now
+            </button>
+            <button
+              id="btnDetails"
+              data-tab-target="#Details"
+              class="menuitems"
+            >
+              Details
+            </button>
+            <button
+              id="btnForecast"
+              data-tab-target="#Forecast"
+              class="menuitems"
+            >
+              Forecast
+            </button>
+            <!-- <a href="#tab1" id="now" class="menuitems">Now</a>
             <a href="#tab2" id="details" class="menuitems">Details</a>
-            <a href="#tab3" id="forecast" class="menuitems">Forecast</a>
+            <a href="#tab3" id="forecast" class="menuitems">Forecast</a> -->
           </div>
         </div>
         <div class="window2">
@@ -87,5 +104,6 @@
     <script type="module" src="weatherRender.js"></script>
     <script type="module" src="storage.js"></script>
     <script type="module" src="converter.js"></script>
+    <script type="module" src="tabs.js"></script>
   </body>
 </html>

@@ -529,6 +529,7 @@ function hmrAcceptRun(bundle, id) {
 //[...locations] WTF IS THIS
 //add
 //рукурсия и динамические импорты
+var _tabsJs = require("./tabs.js");
 var _uiJs = require("./UI.js");
 var _weatherRenderJs = require("./weatherRender.js");
 var _storageJs = require("./storage.js");
@@ -540,7 +541,19 @@ _uiJs.UI.ALWAYS_ON_DISPLAY.searchBtn.addEventListener("click", (e)=>{
 });
 _uiJs.UI.CURRENT.addCityBtn.addEventListener("click", _weatherRenderJs.addCity);
 
-},{"./UI.js":"kSssP","./weatherRender.js":"22C9S","./storage.js":"kS9sU"}],"kSssP":[function(require,module,exports) {
+},{"./tabs.js":"eS7re","./UI.js":"kSssP","./weatherRender.js":"22C9S","./storage.js":"kS9sU"}],"eS7re":[function(require,module,exports) {
+//dataset??
+var _uiJs = require("./UI.js");
+_uiJs.UI.ALWAYS_ON_DISPLAY.tabs.forEach((tab)=>{
+    tab.addEventListener("click", ()=>{
+        const target = document.querySelector(tab.dataset.tabTarget);
+        _uiJs.UI.ALWAYS_ON_DISPLAY.windows.forEach((tabContent)=>tabContent.classList.remove("active")
+        );
+        target.classList.add("active");
+    });
+});
+
+},{"./UI.js":"kSssP"}],"kSssP":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
 parcelHelpers.export(exports, "UI", ()=>UI
@@ -548,7 +561,9 @@ parcelHelpers.export(exports, "UI", ()=>UI
 const UI = {
     ALWAYS_ON_DISPLAY: {
         searchBtn: document.querySelector(".search"),
-        searchedCity: document.querySelector(".input")
+        searchedCity: document.querySelector(".input"),
+        tabs: document.querySelectorAll("[data-tab-target]"),
+        windows: document.querySelectorAll("[data-tab-content]")
     },
     CURRENT: {
         temperature: document.querySelector(".temperature"),

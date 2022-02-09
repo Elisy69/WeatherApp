@@ -2,6 +2,8 @@ export const UI = {
   ALWAYS_ON_DISPLAY: {
     searchBtn: document.querySelector(".search"),
     searchedCity: document.querySelector(".input"),
+    tabs: document.querySelectorAll("[data-tab-target]"),
+    windows: document.querySelectorAll("[data-tab-content]"),
   },
 
   CURRENT: {

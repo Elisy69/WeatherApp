@@ -8,7 +8,7 @@
 //[...locations] WTF IS THIS
 //add
 //рукурсия и динамические импорты
-
+import { openTab } from "./tabs.js";
 import { UI } from "./UI.js";
 import {
   sendWeatherRequest,

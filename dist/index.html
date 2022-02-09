@@ -16,7 +16,7 @@
       <div class="twowindows">
         <div class="window1">
           <div class="content">
-            <div id="tab1" class="tabs">
+            <div id="Now" data-tab-content="" class="active">
               <div class="temperature">City</div>
               <div class="weathericon">
                 <img src="/icons8-cloud-96%201.567cc432.svg" alt="weathericon" class="imgweathericon">
@@ -26,7 +26,7 @@
                 <img src="/Shape.c3e2342a.svg" width="20" height="20" class="addCity">
               </div>
             </div>
-            <div id="tab2" class="tabs">
+            <div id="Details" data-tab-content="">
               <div class="citydetail">City name</div>
               <div class="tempflex">
                 <div class="text">Temperature:&nbsp</div>
@@ -51,15 +51,24 @@
                 <div class="sunset">18:00</div>
               </div>
             </div>
-            <div id="tab3" class="tabs">
+            <div id="Forecast" data-tab-content="">
               <div class="forecastcity">Aktobe</div>
               <div class="forecastscrollbox"></div>
             </div>
           </div>
           <div class="menu">
-            <a href="#tab1" id="now" class="menuitems">Now</a>
+            <button id="btnNow" data-tab-target="#Now" class="menuitems">
+              Now
+            </button>
+            <button id="btnDetails" data-tab-target="#Details" class="menuitems">
+              Details
+            </button>
+            <button id="btnForecast" data-tab-target="#Forecast" class="menuitems">
+              Forecast
+            </button>
+            <!-- <a href="#tab1" id="now" class="menuitems">Now</a>
             <a href="#tab2" id="details" class="menuitems">Details</a>
-            <a href="#tab3" id="forecast" class="menuitems">Forecast</a>
+            <a href="#tab3" id="forecast" class="menuitems">Forecast</a> -->
           </div>
         </div>
         <div class="window2">
@@ -72,5 +81,6 @@
     <script src="weatherRender.js" defer=""></script>
     <script src="storage.js" defer=""></script>
     <script src="converter.js" defer=""></script>
+    <script src="tabs.js" defer=""></script>
   </body>
 </html>

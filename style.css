@@ -7,6 +7,9 @@ body {
 }
 
 .wrapper {
+  border-collapse: separate;
+  perspective: 1px;
+  border-radius: 2.5%;
   border-top: solid;
   border-left: solid;
   border-right: solid;
@@ -15,7 +18,7 @@ body {
   height: 380px;
   width: 600px;
   margin-left: 15px;
-  margin-top: 30px;
+  margin-top: 174px;
   margin-bottom: 0px;
   padding-bottom: 0px;
 }
@@ -54,6 +57,7 @@ form {
 }
 
 .window1 {
+  border-radius: 0 0 0 2.4%;
   display: flex;
   flex-direction: column;
   height: 350px;
@@ -78,6 +82,7 @@ form {
   border-color: black;
   padding-bottom: 0px;
   margin-bottom: 0px;
+  border-radius: 0 0 2.4% 0;
 }
 
 .weathericon {
@@ -124,15 +129,33 @@ form {
   cursor: pointer;
 }
 
-#now {
+#Now {
   border-right: solid;
   border-width: 1px;
   border-color: black;
 }
-#details {
+
+#btnNow {
+}
+
+#Details {
   border-right: solid;
   border-width: 1px;
   border-color: black;
+  flex-direction: column;
+  font-size: 32px;
+  padding: 5px;
+}
+
+#Forecast {
+}
+
+[data-tab-content] {
+  display: none;
+}
+
+.active[data-tab-content] {
+  display: block;
 }
 
 .input {
@@ -169,20 +192,6 @@ form {
   line-height: 25px;
 }
 
-.tabs {
-  display: none;
-}
-
-.tabs:target {
-  display: block;
-}
-
-#tab2 {
-  flex-direction: column;
-  font-size: 32px;
-  padding: 5px;
-}
-
 .citydetail {
   font-size: 60px;
   padding-bottom: 26px;
@@ -190,9 +199,6 @@ form {
 
 .sunset {
   padding-bottom: 21px;
-}
-
-#tab3 {
 }
 
 .forecastcity {
@@ -265,4 +271,8 @@ form {
   grid-row-end: 3;
   justify-self: end;
   align-self: start;
+}
+
+.hidden {
+  display: none;
 }
