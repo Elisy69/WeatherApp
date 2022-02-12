@@ -678,6 +678,8 @@ function renderCurrentWeather(weatherData) {
     _uiJs.UI.CURRENT.temperature.textContent = `${weatherData.temp}°`;
     _uiJs.UI.CURRENT.city.textContent = weatherData.city;
     _uiJs.UI.FORECAST.city.textContent = weatherData.city;
+    document.body.style.backgroundImage = `url(https://source.unsplash.com/1600x900/?${weatherData.city}&${weatherData.weather})`;
+    console.log(document.body.style.backgroundImage);
     getIcon(weatherData.icon);
 }
 function renderForecast(forecastDaysArray) {

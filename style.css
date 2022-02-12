@@ -2,8 +2,12 @@ html {
   height: 100vh;
 }
 body {
-  height: 100%;
+  height: 450px;
+  width: 1000px;
   margin: 0;
+  color: white;
+  background-repeat: no-repeat;
+  background-size: 100%;
 }
 
 .wrapper {
@@ -21,11 +25,29 @@ body {
   margin-top: 174px;
   margin-bottom: 0px;
   padding-bottom: 0px;
+  background: #000000d0;
+}
+
+.form {
+  padding: 0px;
+  padding-left: 8px;
 }
 
 .input {
-  width: 86%;
   outline: none;
+  border: none;
+  width: 94%;
+  background-color: #00000000;
+  color: white;
+  position: relative;
+  top: -5px;
+}
+
+.search {
+  height: 4%;
+  width: 4%;
+  position: relative;
+  top: 3px;
 }
 
 form {
@@ -88,14 +110,15 @@ form {
 .weathericon {
   display: block;
   text-align: center;
-  margin: 60px;
-  margin-top: 20px;
+  margin: 0px;
   padding: 0px;
 }
 
 .imgweathericon {
-  height: 109px;
-  width: 128px;
+  height: 63%;
+  width: 63%;
+  position: relative;
+  top: -21px;
 }
 
 .city {
@@ -116,6 +139,7 @@ form {
   display: flex;
   align-content: space-between;
   justify-content: space-evenly;
+  border-radius: 0% 0% 0% 5%;
 }
 
 .menuitems {
@@ -125,17 +149,32 @@ form {
   line-height: 28px;
   outline: none;
   text-decoration: none;
-  color: black;
+  color: white;
   cursor: pointer;
+  border-radius: 0 0 0 5px;
+}
+
+.menuitems:hover {
+  background-color: #555555;
+  color: white;
 }
 
 #Now {
   border-right: solid;
   border-width: 1px;
   border-color: black;
+  border-right: 0px;
 }
 
 #btnNow {
+  border-right: solid;
+  border-width: 1px;
+  border-color: black;
+}
+#btnDetails {
+  border-right: solid;
+  border-width: 1px;
+  border-color: black;
 }
 
 #Details {
@@ -156,11 +195,6 @@ form {
 
 .active[data-tab-content] {
   display: block;
-}
-
-.input {
-  border: none;
-  width: 96%;
 }
 
 .addedlocations {
@@ -210,7 +244,7 @@ form {
 .forecastscrollbox {
   padding: 0px;
   height: 290px;
-  overflow: scroll;
+  overflow: auto;
 }
 
 .forecastbox {
@@ -271,6 +305,8 @@ form {
   grid-row-end: 3;
   justify-self: end;
   align-self: start;
+  position: relative;
+  top: -15px;
 }
 
 .hidden {
